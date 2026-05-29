@@ -347,6 +347,31 @@ body::before{
 .refcard__li::before{content:"";width:16px;height:16px;border-radius:4px;background:#0a66c2;display:inline-block}
 .refcard__li:hover{color:var(--accent)}
 
+/* ============ CASE STUDIES ============ */
+.cases{background:var(--paper-2);padding:90px 0}
+.cases .section-head{border-color:var(--line)}
+.cases__title{max-width:var(--maxw);margin:30px auto 10px;padding:0 clamp(20px,5vw,64px);font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.04;font-size:clamp(2rem,4.6vw,3.4rem)}
+.cases__intro{max-width:var(--maxw);margin:0 auto 40px;padding:0 clamp(20px,5vw,64px);color:var(--ink-2);max-width:62ch}
+.cases__grid{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s}
+.case:hover{transform:translateY(-5px);box-shadow:0 26px 54px -28px rgba(22,19,13,.5)}
+.case__img{aspect-ratio:16/10;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.case__img img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .6s var(--ease)}
+.case:hover .case__img img{transform:scale(1.04)}
+.case__body{padding:26px;display:flex;flex-direction:column;flex:1}
+.case__cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.case__metric{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.case__n{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.03em;line-height:1;color:var(--accent)}
+.case__nlabel{font-size:.82rem;color:var(--ink-3)}
+.case__name{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:-.02em;margin:10px 0 10px}
+.case__text{color:var(--ink-2);font-size:.96rem;flex:1}
+.case__stats{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.case__stats span{font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:100px;padding:5px 11px}
+.case--feature{grid-column:1/-1;flex-direction:row}
+.case--feature .case__img{aspect-ratio:auto;width:44%;flex-shrink:0;border-bottom:none;border-right:1px solid var(--line)}
+.case--feature .case__body{justify-content:center;padding:36px}
+.case--feature .case__n{font-size:clamp(2.6rem,5vw,3.8rem)}
+
 /* ============ LEADERSHIP ============ */
 .lead{background:var(--noir);color:var(--paper);padding:90px 0}
 .lead__top{max-width:var(--maxw);margin:30px auto 0;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
@@ -434,6 +459,9 @@ body::before{
   .tm__top{grid-template-columns:1fr;gap:18px}
   .wall{columns:2}
   .refs__grid{grid-template-columns:1fr}
+  .cases__grid{grid-template-columns:1fr}
+  .case--feature{flex-direction:column}
+  .case--feature .case__img{width:100%;aspect-ratio:16/10;border-right:none;border-bottom:1px solid var(--line)}
 }
 @media(max-width:640px){
   body{font-size:16px}
