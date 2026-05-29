@@ -50,8 +50,8 @@ const lbImg = document.getElementById('lbImg');
 const lbCap = document.getElementById('lbCap');
 const closeLb = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); };
 
-document.getElementById('certs').addEventListener('click', (e) => {
-  const btn = e.target.closest('.cert');
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.cert, .shot');
   if (!btn) return;
   lbImg.src = btn.dataset.img;
   lbImg.alt = btn.dataset.cap || '';
