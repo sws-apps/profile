@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kat Hervera — Résumé</title>
+<meta name="description" content="Résumé of Kat Hervera — AI Developer, Product Manager, Systems Architect, and Licensed Professional Teacher." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2316130d'/><text x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23e5421e' text-anchor='middle'>K</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#fffdf8;--ink:#16130d;--ink-2:#3a352b;--ink-3:#6b6354;
+  --accent:#e5421e;--line:rgba(22,19,13,.16);
+  --display:"Bricolage Grotesque",sans-serif;--body:"Hanken Grotesk",-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#26221a;font-family:var(--body);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:32px 16px}
+a{color:inherit;text-decoration:none}
+
+/* toolbar (screen only) */
+.bar{max-width:900px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bar a,.bar button{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;border-radius:100px;padding:11px 20px;cursor:pointer;border:1px solid rgba(239,233,221,.3);background:transparent;color:#efe9dd;transition:.25s}
+.bar a:hover{background:rgba(239,233,221,.1)}
+.bar .dl{background:var(--accent);border-color:var(--accent);color:#fff}
+.bar .dl:hover{background:#ff4d24}
+
+/* sheet */
+.sheet{max-width:900px;margin:0 auto;background:var(--paper);border-radius:6px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+.head{background:var(--ink);color:var(--paper);padding:40px 44px}
+.head__name{font-family:var(--display);font-weight:800;font-size:3rem;letter-spacing:-.03em;line-height:.95}
+.head__name .a{color:var(--accent)}
+.head__roles{font-family:var(--body);font-weight:600;margin-top:10px;color:rgba(239,233,221,.92);font-size:1.02rem}
+.head__roles i{color:var(--accent);font-style:normal;padding:0 .3em}
+.head__tag{margin-top:10px;color:rgba(239,233,221,.6);font-size:.92rem;max-width:62ch}
+.head__contact{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-family:var(--mono);font-size:.74rem;color:rgba(239,233,221,.85)}
+.head__contact a:hover{color:var(--accent)}
+
+.cols{display:grid;grid-template-columns:1fr 1.9fr;gap:0}
+.side{padding:34px 30px;border-right:1px solid var(--line);background:#faf7f0}
+.main{padding:34px 36px}
+.sec{margin-bottom:26px}
+.sec:last-child{margin-bottom:0}
+.sec__h{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.profile{color:var(--ink-2);font-size:.96rem}
+
+.grp{margin-bottom:14px}
+.grp__t{font-family:var(--display);font-weight:700;font-size:.92rem;margin-bottom:7px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-family:var(--mono);font-size:.66rem;border:1px solid var(--line);border-radius:100px;padding:3px 8px;color:var(--ink-2)}
+
+.cred{margin-bottom:11px}
+.cred__t{font-weight:600;font-size:.9rem}
+.cred__s{font-size:.78rem;color:var(--ink-3)}
+
+.job{margin-bottom:18px;position:relative}
+.job:last-child{margin-bottom:0}
+.job__top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.job__role{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+.job__yr{font-family:var(--mono);font-size:.74rem;color:var(--accent);white-space:nowrap}
+.job__org{font-size:.86rem;color:var(--ink-3);margin-bottom:4px}
+.job__d{font-size:.9rem;color:var(--ink-2)}
+
+.results{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.res__n{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--accent);line-height:1}
+.res__l{font-size:.78rem;color:var(--ink-2);margin-top:5px}
+
+.proj{font-size:.9rem;color:var(--ink-2);margin-bottom:7px}
+.proj b{color:var(--ink);font-weight:600}
+
+@media(max-width:720px){
+  .cols{grid-template-columns:1fr}
+  .side{border-right:none;border-bottom:1px solid var(--line)}
+  .head__name{font-size:2.3rem}
+}
+
+@media print{
+  @page{size:A4;margin:12mm}
+  body{background:#fff;padding:0}
+  .bar{display:none}
+  .sheet{max-width:none;box-shadow:none;border-radius:0}
+  .head{padding:0 0 18px}
+  .head,.side,.main,.res,.chips span,.sec__h,.head__name .a,.res__n,.job__yr,.head__roles i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .head{background:#fff;color:var(--ink)}
+  .head__name .a{color:var(--accent)}
+  .head__roles{color:var(--ink)}
+  .head__tag{color:var(--ink-2)}
+  .head__contact{color:var(--ink-2)}
+  .cols{grid-template-columns:1fr 1.9fr;gap:0}
+  .side{background:#fff;padding:18px 18px 0 0;border-right:1px solid var(--line)}
+  .main{padding:18px 0 0 22px}
+  .job,.grp,.cred,.sec{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a href="index.html">← Back to portfolio</a>
+  <button class="dl" onclick="window.print()">Save as PDF / Print</button>
+</div>
+
+<div class="sheet">
+  <header class="head">
+    <h1 class="head__name"><span class="a">Kat</span> Hervera</h1>
+    <p class="head__roles">AI Developer <i>/</i> Product Manager <i>/</i> Systems Architect <i>/</i> Licensed Professional Teacher</p>
+    <p class="head__tag">Building AI-powered products, scalable systems, and future-ready teams — from idea to product to deployment to adoption.</p>
+    <div class="head__contact">
+      <a href="mailto:kat.hervera@gmail.com">kat.hervera@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kathervera/">linkedin.com/in/kathervera</a>
+      <a href="https://github.com/sws-apps">github.com/sws-apps</a>
+      <a href="https://www.scalewithsystem.com/">scalewithsystem.com</a>
+      <span>Philippines</span>
+    </div>
+  </header>
+
+  <div class="cols">
+    <aside class="side">
+      <div class="sec">
+        <h2 class="sec__h">Core Expertise</h2>
+        <div class="grp"><div class="grp__t">AI &amp; Agentic Systems</div><div class="chips"><span>Claude Code</span><span>Claude Agents</span><span>Multi-Agent</span><span>RAG</span><span>LangChain</span><span>LangGraph</span><span>CUA</span><span>Gemini</span></div></div>
+        <div class="grp"><div class="grp__t">Product &amp; Systems</div><div class="chips"><span>Product Mgmt</span><span>PRD</span><span>Systems Architecture</span><span>SaaS</span><span>Workflow Design</span></div></div>
+        <div class="grp"><div class="grp__t">Development</div><div class="chips"><span>Python</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Firebase</span><span>Supabase</span><span>REST APIs</span></div></div>
+        <div class="grp"><div class="grp__t">Cloud &amp; Infra</div><div class="chips"><span>AWS</span><span>GCP</span><span>Railway</span><span>Vercel</span><span>Render</span><span>Docker</span><span>Cloudflare</span></div></div>
+        <div class="grp"><div class="grp__t">Marketing &amp; Automation</div><div class="chips"><span>GoHighLevel</span><span>HubSpot</span><span>n8n</span><span>Zapier</span><span>Make</span><span>CRM</span><span>Funnels</span></div></div>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">Education &amp; Credentials</h2>
+        <div class="cred"><div class="cred__t">Licensed Professional Teacher (LPT)</div></div>
+        <div class="cred"><div class="cred__t">Robotics Technology NC II</div><div class="cred__s">TESDA · Felta TechVoc Academy</div></div>
+        <div class="cred"><div class="cred__t">HubSpot Service Hub</div><div class="cred__s">HubSpot Academy</div></div>
+        <div class="cred"><div class="cred__t">Web Development for Developers</div><div class="cred__s">DICT Region IV-A</div></div>
+        <div class="cred"><div class="cred__t">Org. Leadership Coaching</div><div class="cred__s">SOLA</div></div>
+        <div class="cred"><div class="cred__t">Intl. Inclusive Education</div><div class="cred__s">IAM-FAME &amp; CCEA, USA</div></div>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">Speaking &amp; Training</h2>
+        <div class="cred"><div class="cred__t">Panelist — I2TEQ Connect 2025</div><div class="cred__s">Prov. Gov. of Quezon &amp; DTI</div></div>
+        <div class="cred"><div class="cred__t">Resource Speaker / Trainer</div><div class="cred__s">DICT Region VIII &amp; Luzon Cluster 2</div></div>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">References</h2>
+        <div class="cred"><div class="cred__t">Joseph Kerolos</div><div class="cred__s">COO, Pinnacle Minds LLC</div></div>
+        <div class="cred"><div class="cred__t">Diego Arbiz</div><div class="cred__s">Co-Founder, Scale With System</div></div>
+        <div class="cred"><div class="cred__t">Ben Lou</div><div class="cred__s">President &amp; CEO, Debt Aid Consulting Intl.</div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="sec">
+        <h2 class="sec__h">Profile</h2>
+        <p class="profile">Technology leader with 10+ years spanning web development, product management, and operations — now focused on AI-powered applications, agentic systems, workflow automation, and software development. I build products, design scalable systems, and train future-ready teams. Founder of Scale With System; on a mission of 1 million Filipino app-founder stories.</p>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">Experience</h2>
+        <div class="job"><div class="job__top"><span class="job__role">AI Developer</span><span class="job__yr">2025–Present</span></div><div class="job__org">Pinnacle Minds</div><p class="job__d">AI system architecture, workflow automation, and scalable product implementation for an international AI firm.</p></div>
+        <div class="job"><div class="job__top"><span class="job__role">Founder</span><span class="job__yr">2023–Present</span></div><div class="job__org">Scale With System</div><p class="job__d">CRM, automation, operations, and growth systems for service businesses and digital companies.</p></div>
+        <div class="job"><div class="job__top"><span class="job__role">Fractional Digital Marketing Manager</span><span class="job__yr">2022–Present</span></div><div class="job__org">Multiple brands</div><p class="job__d">Funnel development, CRM architecture, and lead-nurturing systems.</p></div>
+        <div class="job"><div class="job__top"><span class="job__role">Co-Founder &amp; CTO</span><span class="job__yr">2020–2022</span></div><div class="job__org">Six Figure Ecom</div><p class="job__d">Product, systems, and technical leadership for an e-commerce venture.</p></div>
+        <div class="job"><div class="job__top"><span class="job__role">Product Manager</span><span class="job__yr">2020</span></div><div class="job__org">DeepData</div><p class="job__d">Product strategy and delivery.</p></div>
+        <div class="job"><div class="job__top"><span class="job__role">Technical Designer (UI/UX)</span><span class="job__yr">2018–2020</span></div><div class="job__org">Digital products</div><p class="job__d">Interface design and front-end implementation.</p></div>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">Selected Results</h2>
+        <div class="results">
+          <div class="res"><div class="res__n">6–10%</div><div class="res__l">E-commerce conversion (vs. 1–4% typical) — Father and Son PH</div></div>
+          <div class="res"><div class="res__n">₱1M</div><div class="res__l">7-figure first launch — School of Strategist</div></div>
+          <div class="res"><div class="res__n">₱767K</div><div class="res__l">6-figure first launch — Top Dog Copywriter</div></div>
+          <div class="res"><div class="res__n">₱475K</div><div class="res__l">Batch sales, 75% opt-in — Good Diva Marketing</div></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2 class="sec__h">Selected Projects</h2>
+        <p class="proj"><b>Caputi Studio</b> — local-first screen recorder (SvelteKit, OPFS streaming, AI transcripts roadmap).</p>
+        <p class="proj"><b>Elden HR System</b> — AI-powered HR &amp; workflow system with LMS and gamification.</p>
+        <p class="proj"><b>SB AI App</b> — Firebase PWA with AI assistance, built and sold to an agency.</p>
+        <p class="proj"><b>Google Sheets Automation</b> — automation system used by a US-based ERC company.</p>
+        <p class="proj"><b>SoulSync</b>, <b>TrackWise</b>, <b>Bloxxi Learn</b>, <b>PDF Compressor</b> — AI apps &amp; tools.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
