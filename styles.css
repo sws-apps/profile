@@ -346,7 +346,10 @@ body::before{
 .refcard__name{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em;line-height:1.1}
 .refcard__role{font-size:.84rem;color:var(--ink-3);margin-top:3px}
 .refcard__rel{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(229,66,30,.35);border-radius:100px;padding:5px 11px;align-self:flex-start;margin-bottom:14px}
-.refcard__bio{font-size:.95rem;color:var(--ink-2);line-height:1.55;flex:1}
+.refcard__bio{font-size:.95rem;color:var(--ink-2);line-height:1.55}
+.refcard__serve{margin-top:14px;background:rgba(229,66,30,.07);border:1px solid rgba(229,66,30,.22);border-radius:12px;padding:13px 15px;font-size:.88rem;color:var(--ink-2);line-height:1.5}
+.refcard__serve-l{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.refcard__serve strong{color:var(--ink);font-weight:600}
 .refcard__li{margin-top:18px;font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--ink);display:inline-flex;align-items:center;gap:7px;transition:.3s}
 .refcard__li::before{content:"";width:16px;height:16px;border-radius:4px;background:#0a66c2;display:inline-block}
 .refcard__li:hover{color:var(--accent)}
