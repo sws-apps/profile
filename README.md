@@ -1,6 +1,6 @@
-# Kathreen Hervera — Portfolio
+# Kat Hervera — Portfolio
 
-Personal portfolio of Kathreen Hervera — AI Developer, Product Manager, Systems Architect, and Licensed Professional Teacher. Founder of Scale With System.
+Personal portfolio of Kat Hervera — AI Developer, Product Manager, Systems Architect, and Licensed Professional Teacher. Founder of Scale With System.
 
 Static site (HTML / CSS / vanilla JS), deployed via GitHub Pages.
 
